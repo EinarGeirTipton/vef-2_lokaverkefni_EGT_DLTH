@@ -1,0 +1,312 @@
+@charset "UTF-8";
+@import 'normalize';
+@import 'grid';
+
+
+// þetta er keyrt til að búa til css skránna //
+// sass --watch main.scss:main.css --style compressed //
+
+
+$grunnLitur: rgb(50,50,50);               // litagildi notað í breytu
+$bakgrunnur: #111111;                         // litanafn notað í breytu
+$litur2: #444444;                          // hex litur í breytu
+$leturStaerd: 1.2em;                       // tölugildi í breytu
+$leturStaerdNavigation: 1em;                       // tölugildi í breytu
+$rammi: 3px solid $litur2;                 // breyta með mismunandi gildi
+$fontfamily: Arial, Helvetica, sans-serif;
+$fyrirsogn: 1.8em;
+$skyblue: #25b8d3;  
+
+
+@mixin textarMedLoftIKring {               // Mixin
+  padding: 15px;
+  margin: 10px;
+}
+
+body {                                    // breytur í tagi
+	font-family: $fontfamily;
+  	font-size: $leturStaerd;
+	  background-color: $bakgrunnur;
+	  width: 100%;
+}
+
+
+h1, h2 {
+    color: $litur2;
+}
+h3 {
+  color: darken($bakgrunnur,50);                // darken litafall
+  background-color: invert($bakgrunnur);        // invert litafall
+}
+//Mixin & functions
+header {
+	text-align:center;
+	background-color: $bakgrunnur;
+	color: #ffffff;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 30px;
+	padding-right: 30px;
+	h1,h2 {
+		color: #ffffff;
+	}
+}
+section {
+	text-align:center;
+	
+	color: #ffffff;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+	padding-left: 30px;
+	padding-right: 30px;
+	background: lighten($bakgrunnur,5);  
+
+}
+
+form {
+	padding: 10px;
+	
+	input {
+		padding:10px;
+	}
+	label {
+		color: skyblue;	
+	}
+	input[type=submit] {
+		background-color: skyblue;
+		color: $litur2;
+		border: auto;
+      	border-radius: 10px;
+	}
+}
+
+.titill {                                 // breyta í klasa
+  font-size: $fyrirsogn;
+}
+
+body {
+  a {                                   // hreiðarðir stílar
+    color: #ffffff;
+  }
+}
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+footer div a img {
+  height: 50px;
+  width: 50px;
+}
+
+
+body{
+    grid-template-areas:
+      "nav"
+      "header"
+      "section1"
+      "section2"
+      "section3"
+      "section4"
+      "section5"
+      "footer"
+  }
+
+  
+  nav {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display:grid; 
+	align-items:center;
+	justify-content: center;
+
+	a {                                 
+	  font-size: 0.9; 
+	  text-decoration: none; 
+	  padding: 15px;
+      @include textarMedLoftIKring;
+	
+	}
+	a:hover {
+		color: skyblue;
+	}
+	.nav-selected {
+		background-color: #333333;
+		border-radius: 5em;
+	}
+	img {
+		display: none;
+	}
+    
+  }
+
+
+#frontpage {
+	background-image: url('/img/crowd.jpg');
+	background-repeat: no-repeat;
+	background-color: $bakgrunnur;
+	background-size: cover;
+	header {
+		width: 70%;
+		opacity: 0.9;
+		.grid-container {
+			display: grid;
+			grid-template-columns: auto;
+			padding: 10px;
+			.grid-item {
+				padding: 20px;
+				text-align: center;
+				img {
+					opacity: 1;
+					border-radius: 50em;
+					width: 230px;
+				}
+			}
+	  	}
+		
+	}
+}
+
+#agenda {
+	justify-content: center;
+	.grid-container {
+		display: inline-grid;
+		grid-template-columns: auto;
+		padding: 10px;
+		.grid-item {
+			padding: 20px;
+			text-align: center;
+			
+			picture {
+				img {
+					border-radius: 50em;
+					width: 230px;
+					margin-right: 100px;
+				}
+				
+			}
+			a { 
+				font-size: 3em;
+				text-decoration: none;
+			}
+			.time {
+				transform: rotate(90deg);
+				transform-origin: left top 0;
+				float:right;
+				font-size: 2em;
+				margin-left: 10px;
+			}
+		}
+	  }
+}
+
+
+#artists {
+	section {
+		h3 {
+			background-color: skyblue;
+			padding: 5px;
+			border-radius: 50em;
+		}
+		h2{
+			color: #ffffff;
+		}
+		ul{
+			list-style: none;
+			padding: 0 0 10px 0;
+			margin: 0;
+			li::before, li::after  {
+				content: "• ";
+				color: #ffffff;
+				color: skyblue; /* or whatever color you prefer */
+				padding-left: 3px;
+			  }
+		}
+		img {
+			width: 100%;
+		}
+	}
+}
+
+#registration {
+	form {
+		justify-content: flex-start;
+		input[type=text], select,input[type=email] {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+			text-align: center
+		}
+	}
+}
+
+.youtube {width: 230px; height: 197px}
+
+@media screen and (min-width: 30em){
+	
+}
+	
+@media screen and (min-width: 37.5em) {
+	.youtube {
+		width: 480px; 
+		height: 385px
+	}
+
+}
+
+@media screen and (min-width: 48em) {
+	nav {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		display:flex; 
+	
+		a {                                 
+		  font-size: 0.9em; 
+		  text-decoration: none; 
+		  padding: 5px;
+		  @include textarMedLoftIKring;
+		
+		}
+		img {
+			width: 100px;
+			display: block;
+		}
+		
+	}
+	.youtube {
+		width: 640px; 
+		height: 385px
+	};
+	#frontpage {
+		header {
+			.grid-container {
+				grid-template-columns: auto auto auto;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 60em){
+	nav {
+		a {                                 
+		font-size: 1.2em; 
+		padding: 15px;
+	  }
+	}
+}
+@media screen and (min-width: 80em){
+  section{
+    width: 60em;
+  }
+ 
+}
