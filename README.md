@@ -10,3 +10,7 @@ Dæmi um listamenn sem eru skráðir hjá okkur eru Drake, DJ Khaled og Beyonce.
 
 # Markhópur
 Markhópur fyrirtækisins eru íslenskir tónlistaráhugamenn sem hafa áhuga á að sjá heimsþekkta listamenn. Markmiðið með útgáfutónleikunum er að kynna þetta nýja fyrirtæki inn með "stæl" hjá markhópnum.
+
+
+#Vefsvæðið
+[https://einargeirtipton.github.io/vef-2_lokaverkefni_EGT_DLTH]
