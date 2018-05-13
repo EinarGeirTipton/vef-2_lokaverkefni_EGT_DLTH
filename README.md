@@ -1,5 +1,5 @@
-# vef-2_lokaverkefni_EGT_Daniel
-Eftirfarandi er lokaverkefni Einar og Daniels í áfanganum VEFÞ2.
+# Lokaverkefni í VEFÞ2
+Eftirfarandi er lokaverkefni hjá Einari Geir Tipton og Daníel Leó Þórissyni í áfanganum VEFÞ2.
 
 # Music Cloud
 Music Cloud var stofnað af Einar Geir Tipton og Daníel Leó Þórisson árið 2018 og er staðsett í húsi Tækniskólans við Frakkastíg 27, 101 Reykjavík.
