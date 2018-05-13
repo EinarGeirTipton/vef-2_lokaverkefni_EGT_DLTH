@@ -13,4 +13,4 @@ Markhópur fyrirtækisins eru íslenskir tónlistaráhugamenn sem hafa áhuga á
 
 
 # Vefsvæðið
-[https://einargeirtipton.github.io/vef-2_lokaverkefni_EGT_DLTH]
+https://einargeirtipton.github.io/vef-2_lokaverkefni_EGT_DLTH
