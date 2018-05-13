@@ -420,7 +420,14 @@ footer {
 body {
   display: grid;
   grid-gap: 0;
-  grid-template-areas: "nav" "header" "section1" "section2" "section3" "section4" "section5" "footer"; }
+  grid-template-areas: "nav"
+ "header"
+ "section1"
+ "section2"
+ "section3"
+ "section4"
+ "section5"
+ "footer"; }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -488,7 +495,14 @@ footer div a img {
   width: 50px; }
 
 body {
-  grid-template-areas: "nav" "header" "section1" "section2" "section3" "section4" "section5" "footer"; }
+  grid-template-areas: "nav"
+ "header"
+ "section1"
+ "section2"
+ "section3"
+ "section4"
+ "section5"
+ "footer"; }
 
 nav {
   padding-top: 10px;
@@ -511,7 +525,7 @@ nav {
     display: none; }
 
 #frontpage {
-  background-image: url("/img/crowd.jpg");
+  background-image: url("../img/crowd.jpg");
   background-repeat: no-repeat;
   background-color: #111111;
   background-size: cover; }
